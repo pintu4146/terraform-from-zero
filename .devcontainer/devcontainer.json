@@ -1,0 +1,42 @@
+{
+  // If Docker is not available on your system, you can use Podman as an alternative.
+  // Configure VS Code settings: "dev.containers.dockerPath": "podman" (or full path to podman executable)
+  // Ensure Podman is installed and running on your system.
+  "name": "Terraform Learning Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "containerEnv": {
+    "AWS_ACCESS_KEY_ID": "test",
+    "AWS_SECRET_ACCESS_KEY": "test",
+    "AWS_DEFAULT_REGION": "us-east-1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-vscode.vscode-json",
+        "redhat.vscode-yaml",
+        "ms-vscode-remote.remote-containers"
+      ],
+      "settings": {
+        "terraform.formatOnSave": true,
+        "editor.formatOnSave": true,
+        "terraform.validateOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true
+      }
+    }
+  },
+  "postCreateCommand": "/workspaces/terraform-from-zero/00-environment-setup/setup.sh",
+  "forwardPorts": [4566]
+}

@@ -1,0 +1,61 @@
+# Terraform
+# Ignore Terraform state files (contain sensitive data and are environment-specific)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore Terraform cache and downloaded providers
+.terraform/
+
+# Private Keys and Certificates
+# Never commit private keys or certificates to version control
+*.pem
+*.key
+*.p12
+*.pfx
+example-key.pem
+
+# OS Generated Files
+# Common files created by operating systems
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.stackdump
+
+# IDE and Editor Files
+# Files created by various editors and IDEs
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and Temporary Files
+# Application logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Backup Files
+# Common backup file extensions
+*.bak
+*.backup
+*.old
+
+# Environment Variables
+# Files containing environment variables or secrets
+.env
+.env.local
+.env.*.local
+
+# Build and Distribution
+# Compiled binaries and distribution files
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
