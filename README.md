@@ -28,7 +28,7 @@ The goal is simple:
 |------|--------|
 | `00-environment-setup` | Terraform + AWS(LocalStack) setup |
 | `01-keypair-with-terraform` | RSA keypair creation & state understanding |
-| `02-ec2-basics` | EC2 creation (coming next) |
+| `02-Create Security Group Using Terraform` | Create Security Group (coming next) |
 
 Each folder contains:
 - Terraform code
